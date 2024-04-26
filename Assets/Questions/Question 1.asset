@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 1
   m_EditorClassIdentifier: 
   question: When was Valorant released?
+  answers:
+  - 2020
+  - 2017
+  - 2018
+  - 2019
+  correctAnswerIndex: 0
