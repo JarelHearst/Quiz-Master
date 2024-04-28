@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 4
   m_EditorClassIdentifier: 
   question: Whose ultimate is named "Annihilation"?
+  answers:
+  - Sova
+  - Omen
+  - Brimstone
+  - Deadlock
+  correctAnswerIndex: 3

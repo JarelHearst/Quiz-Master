@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 2
   m_EditorClassIdentifier: 
   question: What is the total defuse time of the spike?
+  answers:
+  - 4
+  - 10
+  - 7
+  - 8
+  correctAnswerIndex: 2

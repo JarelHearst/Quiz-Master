@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 5
   m_EditorClassIdentifier: 
   question: What gun has the highest fire rate?
+  answers:
+  - Odin
+  - Stinger
+  - Spectre
+  - Ares
+  correctAnswerIndex: 1
