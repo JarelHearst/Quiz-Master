@@ -51,7 +51,7 @@ public class Timer : MonoBehaviour
                 timerValue = timeToCompleteQuestion;
                 loadNextQuestion = true;
             }
-            Debug.Log(timerValue);
+
         }
     }
 }
