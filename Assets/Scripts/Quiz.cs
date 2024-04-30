@@ -100,7 +100,6 @@ public class Quiz : MonoBehaviour
             progressBar.value++;
             scoreKeeper.IncrementQuestionsSeen();
         }
-
     }
 
     void GetRandomQuestion()
