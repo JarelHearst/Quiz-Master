@@ -32,8 +32,8 @@ public class Quiz : MonoBehaviour
     public bool isComplete;
     void Awake()
     {
-        timer = FindObjectOfType<Timer>();
-        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        timer = FindFirstObjectByType<Timer>();
+        scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
         progressBar.maxValue = questions.Count;
         progressBar.value = 0;
     }
@@ -72,20 +72,24 @@ public class Quiz : MonoBehaviour
         Image buttonImage;
         if (index == currentQuestion.GetCorrectAnswerIndex())
         {
+
             questionText.text = "Correct!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             //Importing UnityEngine.UI got rid of the error similar to Line 21.
             buttonImage.sprite = correctAnswerSprite;
             scoreKeeper.IncrementCorrectAnswers();
+            AudioManager.Instance.PlaySound("Correct Answer");
         }
         else
         {
+
             correctAnswerIndex = currentQuestion.GetCorrectAnswerIndex();
             string correctAnswer = currentQuestion.GetAnswer(correctAnswerIndex);
             questionText.text = "Sorry, the correct answer was: \n" + correctAnswer;
             //questionText.text = question.GetAnswer(correctAnswerIndex);
             buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
+            AudioManager.Instance.PlaySound("Incorrect Answer");
         }
     }
 

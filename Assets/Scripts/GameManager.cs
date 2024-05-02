@@ -10,8 +10,8 @@ public class GaneManager : MonoBehaviour
     EndScreen endScreen;
     void Awake()
     {
-        quiz = FindObjectOfType<Quiz>();
-        endScreen = FindObjectOfType<EndScreen>();
+        quiz = FindFirstObjectByType<Quiz>();
+        endScreen = FindFirstObjectByType<EndScreen>();
     }
     void Start()
     {

@@ -7,7 +7,7 @@ public class StartScreen : MonoBehaviour
    Timer timer;
    void Start()
    {
-      timer = FindObjectOfType<Timer>();
+      timer = FindFirstObjectByType<Timer>();
       timer.CancelTimer();
 
 
