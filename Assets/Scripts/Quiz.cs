@@ -72,7 +72,6 @@ public class Quiz : MonoBehaviour
         Image buttonImage;
         if (index == currentQuestion.GetCorrectAnswerIndex())
         {
-
             questionText.text = "Correct!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             //Importing UnityEngine.UI got rid of the error similar to Line 21.
@@ -82,7 +81,6 @@ public class Quiz : MonoBehaviour
         }
         else
         {
-
             correctAnswerIndex = currentQuestion.GetCorrectAnswerIndex();
             string correctAnswer = currentQuestion.GetAnswer(correctAnswerIndex);
             questionText.text = "Sorry, the correct answer was: \n" + correctAnswer;
@@ -92,7 +90,6 @@ public class Quiz : MonoBehaviour
             AudioManager.Instance.PlaySound("Incorrect Answer");
         }
     }
-
     void GetNextQuestion()
     {
         if (questions.Count > 0)
